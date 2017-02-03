@@ -1,0 +1,60 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view> <!-- view-title="{{contact.name.first}} {{contact.name.last}}"> -->
+  <ion-nav-title>{{contact.name.first}} {{contact.name.last}}</ion-nav-title>
+  <ion-content class="padding">
+
+    <div class="list">
+      <div class="item">
+        <img ng-src="{{contact.picture.large}}" style="width: 64px; height: 64px">
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-home"></i>
+        <div>{{contact.location.street}}</div>
+        <div>{{contact.location.city}}</div>
+        <div>{{contact.location.state}}</div>
+        <div>{{contact.location.postcode}}</div>
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-email"></i>
+        {{contact.email}}
+      </div>
+      <div class="item item-icon-left">
+        <i class="icon ion-iphone"></i>
+        {{contact.phone}}
+      </div>
+      <div class="item item-text-wrap">
+        <p>
+          Bacon ipsum dolor amet porchetta pastrami kielbasa kevin tri-tip short
+          loin alcatra ground round turducken shoulder flank pork loin frankfurter.
+          Andouille jerky meatloaf alcatra sausage meatball drumstick ribeye
+          shankle hamburger turkey pork chop shoulder. Flank corned beef short ribs
+          pancetta chuck, pig meatloaf drumstick kevin pork porchetta tri-tip.
+          Chuck bresaola shankle t-bone. Porchetta andouille frankfurter, pork chop
+          tri-tip ham kielbasa meatloaf short loin.
+
+          Tongue landjaeger pastrami corned beef alcatra, shoulder turkey meatball
+          swine prosciutto jerky short ribs chicken. Ham meatball shank tongue,
+          kevin porchetta short ribs meatloaf tail cow leberkas pork corned beef.
+          Kielbasa andouille shank fatback, ham hock beef meatloaf drumstick
+          sirloin meatball pork short ribs ball tip. Filet mignon swine beef,
+          ground round cupim sausage capicola. Flank alcatra swine frankfurter
+          shankle pig. Shank rump pork meatball cow beef short loin drumstick
+          andouille short ribs ball tip fatback strip steak venison tail.
+
+          Ground round tail shank filet mignon pig meatball shoulder ball tip pork
+          belly ribeye alcatra sausage leberkas chuck cow. Drumstick beef ribs
+          turkey beef pork belly hamburger shoulder frankfurter capicola strip
+          steak tenderloin sausage. Meatball kielbasa meatloaf, jowl pork chop
+          brisket sausage turkey doner cupim shank. Flank tenderloin venison
+          bresaola landjaeger shank. Alcatra rump fatback flank shankle tri-tip
+          cow pork chop ball tip kielbasa corned beef jerky pig boudin meatloaf.
+        </p>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
