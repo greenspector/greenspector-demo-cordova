@@ -5,6 +5,8 @@ Ce projet est une application de démonstration pour les besoins de Greenspector
 Il s'agit d'une application mobile Android [Cordova](http://cordova.apache.org/)
 qui utilise [Ionic Framework](http://ionicframework.com) et [AngularJS](https://angularjs.org/).
 
+Fonctionnellement, elle se repose sur l'API [randomuser](https://randomuser.me/)
+pour afficher une liste de contacts et les détails liés à ces derniers.
 
 Installation:
 ----
