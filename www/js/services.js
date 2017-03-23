@@ -34,12 +34,8 @@ app.factory('ContactsService', function($http) {
   }
 
   // Data Access functions
-  function fetch() {
-    return $http.get('https://randomuser.me/api/?seed=gspt&results=30&page=1');
-  }
-
   function fetch(nbItems, page) {
-    return $http.get('https://randomuser.me/api?seed=gspt&results=' + nbItems + '&page=' + page);
+    return $http.get('https://randomuser.me/api?results=' + nbItems + '&page=' + page);
   }
 
   // Service facade
@@ -52,3 +48,24 @@ app.factory('ContactsService', function($http) {
     getAll: contactsService.getAllContacts
   }
 }) // */
+
+app.factory('LoginService', function($http) {
+
+  var loginService = this;
+
+  // Fake login
+  loginService.login = function(email, password) {
+    return $http.get('https://randomuser.me/api/?seed=' + email + password);
+  }
+
+  // Fake logout -> TODO
+  loginService.logout = function() {
+    return true;
+  }
+
+  // Service facade
+  return {
+    login: loginService.login,
+    logout: loginService.logout
+  }
+})
