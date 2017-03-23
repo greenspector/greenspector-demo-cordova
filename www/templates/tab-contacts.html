@@ -2,7 +2,7 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="contact in contacts track by $index" type="item-text-wrap" href="#/tab/contacts/{{$index}}">
-        <img ng-src="{{contact.picture.thumbnail}}" alt="">
+        <img ng-src="{{contact.picture.large}}" alt="">
         <h2>{{contact.name.first}} {{contact.name.last}}</h2>
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
