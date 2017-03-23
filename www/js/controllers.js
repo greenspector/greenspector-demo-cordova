@@ -23,20 +23,22 @@ angular.module('starter.controllers', [])
 
   vm.loadMoreContacts = function() {
     vm.page++;
-    ContactsService
-    .fetch(vm.pageSize, vm.page)
-    .then(function(success){
-      ContactsService.push(success.data.results);
-      vm.contacts = ContactsService.getAll();
-    }, function(error){
-      //AlertPopupCtrl.showAlert(error);
-      console.error('Oups! Something went wrong', error);
-    })
-    .finally(function(){
-      $ionicLoading.hide();
-      showingSpinner = false;
-      vm.$broadcast('scroll.infiniteScrollComplete');
-    });
+    for(i=0; i<vm.pageSize; i++) {
+      ContactsService
+      .fetch(vm.pageSize, vm.page)
+      .then(function(success){
+        ContactsService.push(success.data.results);
+        vm.contacts = ContactsService.getAll();
+      }, function(error){
+        //AlertPopupCtrl.showAlert(error);
+        console.error('Oups! Something went wrong', error);
+      })
+      .finally(function(){
+        $ionicLoading.hide();
+        showingSpinner = false;
+        vm.$broadcast('scroll.infiniteScrollComplete');
+      });
+    }
   }
 
 })
